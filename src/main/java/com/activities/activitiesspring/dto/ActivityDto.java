@@ -4,20 +4,21 @@ package com.activities.activitiesspring.dto;
 import com.activities.activitiesspring.model.Activity;
 import com.activities.activitiesspring.model.ActivityType;
 
+import java.time.LocalDate;
 import java.util.Date;
 
 public class ActivityDto {
 
     private Long id;
     private ActivityType activityType;
-    private Date activityDate;
+    private LocalDate activityDate;
     private double burnedCalories;
     private double  duringTime;
 
     public ActivityDto() {
     }
 
-    public ActivityDto(Long id, ActivityType activityType, Date activityDate, double burnedCalories, double duringTime) {
+    public ActivityDto(Long id, ActivityType activityType, LocalDate activityDate, double burnedCalories, double duringTime) {
         this.id = id;
         this.activityType = activityType;
         this.activityDate = activityDate;
@@ -50,11 +51,11 @@ public class ActivityDto {
         this.activityType = activityType;
     }
 
-    public Date getActivityDate() {
+    public LocalDate getActivityDate() {
         return activityDate;
     }
 
-    public void setActivityDate(Date activityDate) {
+    public void setActivityDate(LocalDate activityDate) {
         this.activityDate = activityDate;
     }
 

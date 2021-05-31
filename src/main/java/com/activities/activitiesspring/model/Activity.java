@@ -1,6 +1,7 @@
 package com.activities.activitiesspring.model;
 
 import javax.persistence.*;
+import java.time.LocalDate;
 import java.util.Date;
 
 @Entity
@@ -13,7 +14,7 @@ public class Activity {
     @Column(name = "activityType")
     private ActivityType activityType;
     @Column(name = "activityDate")
-    private Date activityDate;
+    private LocalDate activityDate;
     @Column(name = "burnedCalories")
     private double burnedCalories;
     @Column(name = "duringTime")
@@ -22,7 +23,7 @@ public class Activity {
     public Activity() {
     }
 
-    public Activity(ActivityType activityType, Date activityDate, double burnedCalories, double duringTime) {
+    public Activity(ActivityType activityType, LocalDate activityDate, double burnedCalories, double duringTime) {
         this.activityType = activityType;
         this.activityDate = activityDate;
         this.burnedCalories = burnedCalories;
@@ -45,11 +46,11 @@ public class Activity {
         this.activityType = activityType;
     }
 
-    public Date getActivityDate() {
+    public LocalDate getActivityDate() {
         return activityDate;
     }
 
-    public void setActivityDate(Date activityDate) {
+    public void setActivityDate(LocalDate activityDate) {
         this.activityDate = activityDate;
     }
 
